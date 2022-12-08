@@ -1,11 +1,39 @@
 #include "loja.h"
 
+FILE *estoque;
+
+typedef struct produto
+{
+    char nome[20];
+    int estoque, preco, validade[3];
+} produto;
+produto produtos[];
+int listaProdutos = 0;
+
+void consultarEstoque()
+{
+}
+
+
+void adicionarEstoque()
+{
+    printf("Qual o nome do novo produto?\n");
+    estoque = fopen("estoque.txr", "w");
+    fwrite(produtos, sizeof(struct produto), listaProdutos, estoque);
+}
+
+
+void atualizarValor()
+{
+}
+
+
 void mainMenuProduto(int *opcao)
 {
     // int op;
     printf("\n=-=-=-=-=Produtos=-=-=-=-=\n");
     printf("(1) Consultar estoque\n");
-    printf("(2) Adicionar estoque\n");
+    printf("(2) Adicionar produtos ao estoque\n");
     printf("(3) Atualizar valor de produto\n");
     printf("(4) Sair\n");
     scanf("%d", &*opcao);
