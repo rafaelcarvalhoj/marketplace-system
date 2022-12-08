@@ -7,7 +7,7 @@ typedef struct produto
     char nome[20];
     int estoque, preco, validade[3];
 } produto;
-produto produtos[];
+produto produtos;
 int listaProdutos = 0;
 
 void consultarEstoque()
@@ -18,6 +18,7 @@ void consultarEstoque()
 void adicionarEstoque()
 {
     printf("Qual o nome do novo produto?\n");
+    scanf("%s", produtos.nome);
     estoque = fopen("estoque.txr", "w");
     fwrite(produtos, sizeof(struct produto), listaProdutos, estoque);
 }
