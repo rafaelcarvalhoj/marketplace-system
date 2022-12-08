@@ -2,17 +2,16 @@
 
 int menuProduto();
 
-void menu()
+void menu(int *op)
 {
-    int op;
     // exibir menu
     printf("=-=-=-=-=-=MERCADO=-=-=-=-=-=\n");
     printf("(1) Venda\n");
     printf("(2) Produtos\n");
     printf("(3) Clientes\n");
-    printf("(4) Sair");
-    scanf("%d", &op);
-    switch (op)
+    printf("(4) Sair\n");
+    scanf("%d", &*op);
+    switch (*op)
     {
     case 1:
         // funcao venda
@@ -34,9 +33,10 @@ void menu()
 int main()
 {
     // criar ponteio de opcao, se opcao for igual a 4, fechar o programa
-    //  chamar menu
+    int opcao;
+    // chamar menu
     do
     {
-        menu();
-    } while (1);
+        menu(&opcao);
+    } while (opcao != 4);
 }
