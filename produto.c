@@ -17,8 +17,12 @@ void consultarEstoque()
 
 void adicionarEstoque()
 {
-    printf("Qual o nome do novo produto?\n");
+    printf("Insira o nome do novo produto: ");
     scanf("%s", produtos.nome);
+    printf("Insira o valor do novo produto: ");
+    scanf("%d", &produtos.preco);
+    printf("Insira o estoque do novo produto: ");
+    scanf("%d", &produtos.estoque);
     estoque = fopen("estoque.txr", "w");
     fwrite(produtos, sizeof(struct produto), listaProdutos, estoque);
 }
