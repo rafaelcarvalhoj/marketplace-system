@@ -6,6 +6,7 @@
 #include <string.h>
 
 /*------------------------------DATA TYPES------------------------------*/
+typedef enum boolean{true, false}boolean;
 /*----------------------------------------------------------------------*/
 
 //prototipos funcoes
