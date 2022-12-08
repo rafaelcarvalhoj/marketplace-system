@@ -1,23 +1,29 @@
 #include <stdio.h>
 
-void menu(){
+int menuProduto();
+
+void menu()
+{
     int op;
-    //exibir menu
+    // exibir menu
     printf("=-=-=-=-=-=MERCADO=-=-=-=-=-=\n");
     printf("(1) Venda\n");
     printf("(2) Produtos\n");
     printf("(3) Clientes\n");
-    scanf("%d",&op);
+    printf("(4) Sair");
+    scanf("%d", &op);
     switch (op)
     {
     case 1:
-        //funcao venda
+        // funcao venda
         break;
     case 2:
-        //funcao de produtos
+        menuProduto();
         break;
     case 3:
-        //funcao de clientes
+        // funcao de clientes
+        break;
+    case 4:
         break;
     default:
         printf("Essa opcao nao existe\n");
@@ -27,8 +33,10 @@ void menu(){
 
 int main()
 {
-    //chamar menu
-    do{
+    // criar ponteio de opcao, se opcao for igual a 4, fechar o programa
+    //  chamar menu
+    do
+    {
         menu();
-    }while(1);
+    } while (1);
 }
