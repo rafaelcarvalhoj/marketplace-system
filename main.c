@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "loja.h"
 
 int menuProduto();
 
