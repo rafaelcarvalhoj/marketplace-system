@@ -4,7 +4,7 @@ run:	compile
 	./exec-sis
 
 compile: cliente_o produto_o main_o
-	gcc main.o cliente.o produto.o -o exec-sis
+	gcc -Wall main.o cliente.o produto.o -lm -o exec-sis
 
 main_o:	main.c loja.h
 	gcc -c main.c

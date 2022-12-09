@@ -11,10 +11,14 @@ typedef enum boolean{true, false}boolean;
 
 //prototipos funcoes
 /*----------------------------MAIN FUNCTIONS----------------------------*/
-
+void menu(int *op);
+void limpaBuffer(void); //ESSA FUNCAO SEMPRE SERA USADA ANTES DE LER TEXTOS
 /*----------------------------------------------------------------------*/
 
 /*---------------------------CLIENTE FUNCTIONS--------------------------*/
+void cadastraCliente(void);
+void menuCliente(void);
+int validaCPF(long int CPF);
 /*----------------------------------------------------------------------*/
 
 /*----------------------------PRODUTO FUNCTIONS-------------------------*/

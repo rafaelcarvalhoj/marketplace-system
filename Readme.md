@@ -3,7 +3,7 @@
         Criar o módulo do produto
 
     Johan:
-        Criar o módulo de vendas
+        Criar o módulo de Clientes
     
     Pretin:
         Criar o módulo de clientes

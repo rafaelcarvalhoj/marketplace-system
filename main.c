@@ -1,6 +1,14 @@
 #include "loja.h"
 
-int menuProduto();
+int main()
+{
+    int opcao;
+
+    do
+    {
+        menu(&opcao);
+    } while (opcao != 4);
+}
 
 void menu(int *op)
 {
@@ -17,10 +25,11 @@ void menu(int *op)
         // funcao venda
         break;
     case 2:
-        menuProduto();
+        // menuProduto(); 
         break;
     case 3:
         // funcao de clientes
+        menuCliente();
         break;
     case 4:
         break;
@@ -30,13 +39,8 @@ void menu(int *op)
     }
 }
 
-int main()
+void limpaBuffer(void)
 {
-    // criar ponteio de opcao, se opcao for igual a 4, fechar o programa
-    int opcao;
-    // chamar menu
-    do
-    {
-        menu(&opcao);
-    } while (opcao != 4);
+    char c;
+    while((c = getchar()) != '\n' && c != EOF);
 }
